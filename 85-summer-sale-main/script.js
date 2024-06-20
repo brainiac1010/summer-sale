@@ -135,5 +135,5 @@ function openPopup() {
 
 // Function to close your main popup
 function closePopup() {
-    popup.classList.remove("open-popup");
+    popup.classList.remove("close-popup");
 }
