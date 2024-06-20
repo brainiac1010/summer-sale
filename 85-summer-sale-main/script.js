@@ -56,9 +56,9 @@ document.getElementById('applyCouponBtn').addEventListener('click', function() {
     const applyButton = document.getElementById('applyCouponBtn');
 
     if (couponCodeInput === 'SELL200') {
-        applyButton.disabled = true; // Disable Apply button after correct code entered
+        applyButton.disabled = true; 
     } else {
-        applyButton.disabled = false; // Enable Apply button if code is incorrect
+        applyButton.disabled = false; 
     }
 });
 
