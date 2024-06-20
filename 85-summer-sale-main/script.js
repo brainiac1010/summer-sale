@@ -27,13 +27,6 @@ function updateTotalPrice() {
     const finalPriceElement = document.getElementById('finalPrice');
     const makePurchaseButton = document.getElementById('makePurchaseBtn');
 
-    // Check if total price is greater than 200 to apply discount
-    if (totalPrice > 200) {
-        discount = totalPrice * 0.2; // 20% discount
-    } else {
-        discount = 0; // No discount if total price is 200 or less
-    }
-
     // Calculate final price after discount
     const finalPrice = totalPrice - discount;
 
@@ -50,15 +43,35 @@ function updateTotalPrice() {
     }
 }
 
+// Function to apply discount if applicable
+function applyDiscount() {
+    if (totalPrice > 200) {
+        discount = totalPrice * 0.2; // 20% discount
+    } else {
+        discount = 0; // No discount if total price is 200 or less
+    }
+    updateTotalPrice();
+}
+
 // Apply Coupon Code button logic
 document.getElementById('applyCouponBtn').addEventListener('click', function() {
-    const couponCodeInput = document.getElementById('couponCodeInput').value.trim();
+    const couponCodeInput = document.getElementById('couponInput').value.trim();
+
+    if (couponCodeInput === 'SELL200') {
+        applyDiscount(); // Apply the discount when the coupon code is correct
+        document.getElementById('applyCouponBtn').disabled = true; // Disable the apply button after applying the coupon
+    }
+});
+
+// Enable the apply button when the correct coupon code is entered
+document.getElementById('couponInput').addEventListener('input', function() {
+    const couponCodeInput = document.getElementById('couponInput').value.trim();
     const applyButton = document.getElementById('applyCouponBtn');
 
     if (couponCodeInput === 'SELL200') {
-        applyButton.disabled = true; 
-    } else {
         applyButton.disabled = false; 
+    } else {
+        applyButton.disabled = true; 
     }
 });
 
@@ -109,9 +122,3 @@ document.getElementById('FlexibleSofa').addEventListener('click', function() {
     const FlexibleSofa = document.getElementById('FlexibleSofa');
     appendProductDetails(Furniture, FlexibleSofa);
 });
-
-
-
-
-
-
