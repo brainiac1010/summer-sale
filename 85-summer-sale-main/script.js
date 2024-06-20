@@ -110,4 +110,30 @@ document.getElementById('FlexibleSofa').addEventListener('click', function() {
     appendProductDetails(Furniture, FlexibleSofa);
 });
 
-// HTML section where total price is displayed and buttons are placed
+
+
+
+
+
+// Function to open purchase confirmation popup
+function openPurchasePopup() {
+    const purchasePopup = document.getElementById('purchasePopup');
+    purchasePopup.classList.add('open-popup');
+}
+
+// Function to close purchase confirmation popup
+function closePurchasePopup() {
+    const purchasePopup = document.getElementById('purchasePopup');
+    purchasePopup.classList.remove('open-popup');
+}
+
+// Function to open your main popup
+let popup = document.getElementById("popup");
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+// Function to close your main popup
+function closePopup() {
+    popup.classList.remove("open-popup");
+}

@@ -6,6 +6,54 @@
     <title>Summer Sale</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure popup is on top */
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.center-image {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+        .popup-content img {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        .popup-content h2 {
+            margin-bottom: 10px;
+        }
+
+        .popup-content p {
+            margin-bottom: 20px;
+        }
+
+        .popup-content button {
+            padding: 10px 20px;
+            background: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body class="bg-gray-100">
     <!-- Top area -->
@@ -32,9 +80,16 @@
                 <div class="ml-[240px] mt-14 flex gap-5">
                     <div id="K-Accessories1" class="card rounded-md w-96 bg-white shadow-xl cursor-pointer">
                         <figure class="m-5 rounded-md p-6 flex justify-center bg-gray-100">
-                            <img src="./images/prod1.png" class="object-contain">
+                            <img src="./images/prod1.png" alt="Product 1" class="object-contain">
                         </figure>
                         <div class="card-body">
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h2>
                             <p class="text-center font-bold">K. Accessories</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">39.00 TK</p>
@@ -47,6 +102,13 @@
                             <img src="./images/prod2.png" alt="Product 2" class="object-contain">
                         </figure>
                         <div class="card-body">
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h2>
                             <p class="text-center font-bold">K. Accessories2</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">25.00 TK</p>
@@ -59,6 +121,13 @@
                             <img src="./images/prod3.png" alt="Product 3" class="object-contain">
                         </figure>
                         <div class="card-body">
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h2>
                             <p class="text-center font-bold">Home Cooker</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">49.00 TK</p>
@@ -78,6 +147,13 @@
                             <img src="./images/prod4.png" alt="Product 1" class="object-contain">
                         </figure>
                         <div class="card-body">
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h2>
                             <p class="text-center font-bold">Sports Back Cap</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">49.00 TK</p>
@@ -90,6 +166,13 @@
                             <img src="./images/prod5.png" alt="Product 2" class="object-contain">
                         </figure>
                         <div class="card-body">
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h2>
                             <p class="text-center font-bold">Full Jersey Set</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">69.00 TK</p>
@@ -102,7 +185,14 @@
                             <img src="./images/prod6.png" alt="Product 3" class="object-contain">
                         </figure>
                         <div class="card-body">
-                            <p class="text-center font-bold">Sports cates</p>
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h2>
+                            <p class="text-center font-bold">Sports Cates</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">159.00 TK</p>
                             </div>
@@ -121,6 +211,13 @@
                             <img src="./images/prod7.png" alt="Product 1" class="object-contain">
                         </figure>
                         <div class="card-body">
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                            </h2>
                             <p class="text-center font-bold">Single Relax Chair</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">185.00 TK</p>
@@ -133,7 +230,14 @@
                             <img src="./images/prod8.png" alt="Product 2" class="object-contain">
                         </figure>
                         <div class="card-body">
-                            <p class="text-center font-bold">Children play</p>
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </h2>
+                            <p class="text-center font-bold">Children Play</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">299.00 TK</p>
                             </div>
@@ -145,6 +249,13 @@
                             <img src="./images/prod9.png" alt="Product 3" class="object-contain">
                         </figure>
                         <div class="card-body">
+                            <h2 class="card-title text-center text-yellow-500">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </h2>
                             <p class="text-center font-bold">Flexible Sofa</p>
                             <div class="card-actions justify-end">
                                 <p class="text-center">339.00 TK</p>
@@ -159,7 +270,7 @@
         <div class="mt-24">
             <div class="card rounded-b-none rounded-t-md w-96 bg-white shadow-xl">
                 <div class="p-5">
-                    <h2 class="card-title text-start font-bold mb-3">Have coupon?</h2>
+                    <h2 class="card-title text-start font-bold mb-3">Have a coupon?</h2>
                     <div class="flex items-center">
                         <input id="couponInput" class="bg-gray-100 p-2 w-60 mr-0 rounded-l-md" type="text" placeholder="Enter your coupon code">
                         <button id="applyCouponBtn" class="bg-emerald-400 px-4 py-2 rounded-l-none rounded-r-md text-white">Apply</button>
@@ -176,20 +287,39 @@
                     <p id="Sportswear" class="text-gray-400"></p>
                     <h2 class="card-title text-start font-bold mb-3">3. Furniture</h2>
                     <p id="Furniture" class="text-gray-400"></p>
-                    <hr>
+                    <hr class="my-5">
                     <h2 class="card-title text-start font-bold mb-3">Total price: <span id="totalPrice" class="text-gray-500">00.00 TK</span></h2>
                     <h2 class="card-title text-start font-bold mb-3">Discount: <span id="discount" class="text-gray-500">00.00 TK</span></h2>
                     <h2 class="card-title text-start font-bold mb-3">Total: <span id="finalPrice" class="text-gray-500">00.00 TK</span></h2>
-                    <hr>
-                    <button id="makePurchaseBtn" class="px-4 py-2 rounded bg-green-400 mt-6 font-bold text-white" disabled>Make Purchase</button>
-                    
+                    <hr class="my-2">
+                    <button onclick="openPopup()" id="makePurchaseBtn" class="px-4 py-2 rounded bg-green-400 mt-6 font-bold text-white" disabled>Make Purchase</button>
                 </div>
-            </div>
-            
             </div>
         </div>
     </main>
 
-   <script src="./script.js"></script>
+    <script>
+        function openPopup() {
+            document.getElementById('purchasePopup').style.display = 'flex';
+        }
+
+        function closePurchasePopup() {
+            document.getElementById('purchasePopup').style.display = 'none';
+        }
+
+        document.getElementById('makePurchaseBtn').addEventListener('click', openPopup);
+    </script>
+
+    <!-- Purchase confirmation popup -->
+    <div class="popup" id="purchasePopup">
+        <div class="popup-content">
+            <img class="center-image" src="./images/congo.png" alt="Confirmation Image">
+            <h2>Thank you for your purchase!</h2>
+            <p>Your order has been successfully placed.</p>
+            <button onclick="closePurchasePopup()">OK</button>
+        </div>
+    </div>
+    
+    <script src="./script.js"></script>
 </body>
 </html>
