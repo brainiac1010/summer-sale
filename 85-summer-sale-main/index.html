@@ -278,47 +278,50 @@
                 </div>
             </div>
 
-            <!-- total area -->
-            <div id="purchaseSummary" class="card rounded-t-none w-96 bg-white shadow-xl rounded-b-md">
-                <div class="p-5">
-                    <h2 class="card-title text-start font-bold mb-3">1. Kitchenware</h2>
-                    <p id="Kitchenware" class="text-gray-400"></p>
-                    <h2 class="card-title text-start font-bold mb-3">2. Sportswear</h2>
-                    <p id="Sportswear" class="text-gray-400"></p>
-                    <h2 class="card-title text-start font-bold mb-3">3. Furniture</h2>
-                    <p id="Furniture" class="text-gray-400"></p>
-                    <hr class="my-5">
-                    <h2 class="card-title text-start font-bold mb-3">Total price: <span id="totalPrice" class="text-gray-500">00.00 TK</span></h2>
-                    <h2 class="card-title text-start font-bold mb-3">Discount: <span id="discount" class="text-gray-500">00.00 TK</span></h2>
-                    <h2 class="card-title text-start font-bold mb-3">Total: <span id="finalPrice" class="text-gray-500">00.00 TK</span></h2>
-                    <hr class="my-2">
-                    <button onclick="openPopup()" id="makePurchaseBtn" class="px-4 py-2 rounded bg-green-400 mt-6 font-bold text-white" disabled>Make Purchase</button>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <script>
-        function openPopup() {
-            document.getElementById('purchasePopup').style.display = 'flex';
-        }
-
-        function closePurchasePopup() {
-            document.getElementById('purchasePopup').style.display = 'none';
-        }
-
-        document.getElementById('makePurchaseBtn').addEventListener('click', openPopup);
-    </script>
-
-    <!-- Purchase confirmation popup -->
-    <div class="popup" id="purchasePopup">
-        <div class="popup-content">
-            <img class="center-image" src="./images/congo.png" alt="Confirmation Image">
-            <h2>Thank you for your purchase!</h2>
-            <p>Your order has been successfully placed.</p>
-            <button onclick="closePurchasePopup()">OK</button>
-        </div>
+            
+            
+    
+           <!-- total area -->
+<div id="purchaseSummary" class="card rounded-t-none w-96 bg-white shadow-xl rounded-b-md">
+    <div class="p-5">
+        <h2 class="card-title text-start font-bold mb-3">1. Kitchenware</h2>
+        <p id="Kitchenware" class="text-gray-400"></p>
+        <h2 class="card-title text-start font-bold mb-3">2. Sportswear</h2>
+        <p id="Sportswear" class="text-gray-400"></p>
+        <h2 class="card-title text-start font-bold mb-3">3. Furniture</h2>
+        <p id="Furniture" class="text-gray-400"></p>
+        <hr class="my-5">
+        <h2 class="card-title text-start font-bold mb-3">Total price: <span id="totalPrice" class="text-gray-500">00.00 TK</span></h2>
+        <h2 class="card-title text-start font-bold mb-3">Discount: <span id="discount" class="text-gray-500">00.00 TK</span></h2>
+        <h2 class="card-title text-start font-bold mb-3">Total: <span id="finalPrice" class="text-gray-500">00.00 TK</span></h2>
+        <hr class="my-2">
+        <button id="makePurchaseBtn" class="px-4 py-2 rounded bg-green-400 mt-6 font-bold text-white" disabled>Make Purchase</button>
     </div>
+</div>
+
+<script>
+    // Function to open the purchase confirmation popup
+    function openPurchasePopup() {
+        document.getElementById('purchasePopup').style.display = 'flex';
+    }
+
+    // Function to close the purchase confirmation popup
+    function closePurchasePopup() {
+        document.getElementById('purchasePopup').style.display = 'none';
+    }
+
+    document.getElementById('makePurchaseBtn').addEventListener('click', openPurchasePopup);
+</script>
+
+<!-- Purchase confirmation popup -->
+<div class="popup" id="purchasePopup" style="display: none;">
+    <div class="popup-content">
+        <img class="center-image" src="./images/congo.png" alt="Confirmation Image">
+        <h2>Thank you for your purchase!</h2>
+        <p>Your order has been successfully placed.</p>
+        <button onclick="closePurchasePopup()">OK</button>
+    </div>
+</div>
     
     <script src="./script.js"></script>
 </body>
